@@ -1,0 +1,58 @@
+h1{
+	font-style: Arial;
+	font-style: italic;
+	 text-align: center;
+}
+h2 {
+	font-style: "Trebuchet MS", sans-serif;
+	border: 1px solid black;
+	width: 110px;
+	margin: 0px;
+	background-color: green;
+	float: right;
+}
+.vie{
+	width: 65px;
+	background-color: red; 
+}
+.animal{
+	width: 90px;
+	background-color: yellow; 
+}
+
+p{
+    text-align: justify;
+    clear: both;
+}
+.contenant,.contenant2,.contenant3{
+	float: right;
+	background-color: gray; 
+    border: 1px solid black;
+    padding: 0px;
+    margin: 10px;
+    width: 30%;
+}
+
+.bloc{
+}
+@media all and (max-width: 767px)
+{
+.contenant,.contenant2,.contenant3{
+    width: 93%;
+}
+}
+@media all and (max-width: 991px) and  (min-width: 768px)
+{
+	.contenant,.contenant2{
+    width: 45%;
+}
+.contenant3{
+    width: 92.4%;
+}
+}
+@media all and (min-width: 992px)
+{
+	.contenant,.contenant2,.contenant3{
+    width: 30%;
+}
+}
