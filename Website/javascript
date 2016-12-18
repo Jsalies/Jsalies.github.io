@@ -7,6 +7,6 @@ sfHover = function() {
                 sfEls[i].onmouseout=function() {
                         this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
                 }
-        }
+        }z
 }
 if (window.attachEvent) window.attachEvent("onload", sfHover);

@@ -3,7 +3,7 @@ body{
 	margin: 0px;
     background-color:white;
     background-image:url(images/fond.jpeg);
-    background-size: 100% 900px;
+    background-size: 100% 500%;
 }/*corps du site*/
 .bandeau{
     margin: 0px;
@@ -22,7 +22,7 @@ body{
 }/*nom du site sur le bandeau*/
 
 /*------------Menu du site---------*/
-#menu, #menu ul, #menuportable, #menuportable ul/* gestion du format des Listes */     
+#menu, #menu ul, #menuportable, #menuportable ul/* gestion du format des Listes */
 {
         padding : 0px; /* pas de marge intérieure */
         margin : 0px; /* ni extérieure */
@@ -32,6 +32,7 @@ body{
 }
 #menu, #menuportable /* style d'ecriture du menu */
 {
+        display: inline;
         font-weight : bold;
         font-family : LearningCurve,Arial;
         font-size : 22px;
@@ -66,7 +67,9 @@ html>body #menu li
 {
         margin-top: 1px;
 }
-.lastmenu
+.lastmenu{
+    margin-right: -15px;
+}/* contre les changement de ligner lié aux dézooms*/
 {
     border-bottom: 1px solid white;
 }
