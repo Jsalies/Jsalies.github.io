@@ -3,7 +3,7 @@ body{
 	margin: 0px;
     background-color:white;
     background-image:url(images/fond.jpeg);
-    background-size: 100% 900px;
+    background-size: 100% 750%;
 }/*corps du site*/
 .bandeau{
     margin: 0px;
