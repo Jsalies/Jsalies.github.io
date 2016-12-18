@@ -3,30 +3,56 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="javascript.js"></script>
         <title>Agora-Games Plateforme pour les gamers</title>
     </head>
 
     <body>
-        
-        
-        
     	<header>
     		<!-- Placez ici le contenu de l'en-tête de votre page -->
             <div><img class="bandeau" src="images/bandeau.jpg" alt="bandeau du site" />
-            <img class="cachenoir" src="images/lignenoir.png" alt="cachenoir" />
             <h1 class="titre">Agora-Games</h1></div>
 		</header>
         
-        
-        
+          
 		<nav>
-			<!-- le menu-->
-                <a href="jeux.html"><div class="bouton">Jeux</div>
-                <a href="wiki.html"><div class="bouton">Wiki</div>
-                <a href="contact.html"><div class="bouton">Contact</div>
-                <a href="actus.html"><div class="bouton">Actus</div>
-                <a href="faq.html"><div class="bouton">FAQ</div> 
-                <a href="forum.html"><div class="boutonfinal">Forum</div>
+        <!-- menu telephone -->
+        <ul id="menuportable">
+            <li class="principal"><a>Menu</a>
+                <ul>
+                    <li><a href="index.html">accueil</a></li>
+                    <li><a href="jeux.html">jeux</a></li>
+                    <li><a href="wiki.html">wiki</a></li>
+                    <li><a href="actus.html">actus</a></li>
+                    <li class="lastmenu"><a href="contact.html">contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- menu ordinateur -->
+        <ul id="menu">
+            <li><a href="index.html">accueil</a></li>
+            
+            <li><a href="jeux.html">jeux</a>
+                <ul>
+                        <li><a href="nouveautésjeux.html">nouveautés</a></li>
+                        <li><a href="tousjeux.html">tous les jeux</a></li>
+                </ul>
+            </li>
+            <li><a href="wiki.html">wiki</a>
+                <ul>
+                        <li><a href="nouveautéswiki.html">nouveautés</a></li>
+                        <li><a href="touswiki.html">tous les wikis</a></li>
+                </ul>
+            </li>
+            <li><a href="actus.html">actus</a></li>
+            <li><a href="contact.html">contact</a>
+                <ul>
+                        <li><a href="mail.html">mail</a></li>
+                        <li><a href="post.html">post</a></li>
+                </ul>
+            </li>
+        </ul>
+            
         </nav>
         
         
