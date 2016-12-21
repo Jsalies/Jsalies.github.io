@@ -2,34 +2,27 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <script type="text/javascript" src="javascript.js"></script>
+        <link rel="stylesheet" href="menu.css" />
         <title>Agora-Games Plateforme pour les gamers</title>
     </head>
 
     <body>
     	<header>
-    		<!-- Placez ici le contenu de l'en-tête de votre page -->
-            <div><img class="bandeau" src="images/bandeau.jpg" alt="bandeau du site" />
-            <h1 class="titre">Agora-Games</h1></div>
-		</header>
-        
-          
-		<nav>
-        <!-- menu telephone -->
-        <ul id="menuportable">
-            <li class="principal"><a>Menu</a>
-                <ul>
-                    <li><a href="index.html">accueil</a></li>
-                    <li><a href="jeux.html">jeux</a></li>
-                    <li><a href="wiki.html">wiki</a></li>
-                    <li><a href="evenements.html">évenements</a></li>
-                    <li><a href="contact.html">contact</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!-- menu ordinateur -->
-        <ul id="menu">
+    		<nav>
+                <!-- menu telephone -->
+                <ul id="menuportable">
+                    <li><a>Menu</a>
+                        <ul>
+                            <li><a href="index.html">accueil</a></li>
+                            <li><a href="jeux.html">jeux</a></li>
+                            <li><a href="wiki.html">wiki</a></li>
+                            <li><a href="evenements.html">évenements</a></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </li>
+                </ul>   
+                <!-- menu ordinateur -->
+                <ul id="menu">
             <li><a href="index.html">accueil</a></li>
             
             <li><a href="jeux.html">jeux</a>
@@ -51,15 +44,33 @@
                         <li><a href="post.html">post</a></li>
                 </ul>
             </li>
-        </ul>
-            
-        </nav>
-        
-        
-        
+        </ul>       
+            </nav>
+            <img id="bandeau" src="images/bandeau.jpg">
+            <h1 class="domaine">Agora-Games</h1>
+		</header>
         
 		<footer>
-    		<!-- Placez ici le contenu du pied de page -->
+            <!-- boutons pour remonter etc... -->
+            <div class="footerbuttons">
+            <div><a href="#">remonter</a></div>
+            <div><a href="jeux.html">jeux</a></div>
+            <div><a href="wikis.html">wikis</a></div>
+            <div><a href="contact.html">nous contacter</a></div>
+            </div>
+    		<!-- reseaux sociaux -->
+            <div class="rejoindre">Rejoignez-nous sur :</div>
+            <div id="reseaux">
+            <div class="social">
+            <a href="https://www.facebook.com"><img src="images/facebook.png"></a>
+            </div><div class="social">
+            <a href="https://plus.google.com"><img src="images/nouveau-logo-google-plus-rond.png"></a>
+            </div><div class="social">
+            <a href="https://twitter.com/"><img src="images/twitter-logo-final.png"></a>
+            </div><div class="social">
+            <a href="https://www.youtube.com/"><img class="youtube" src="images/YouTube-icon-full_color.png"></a>
+            </div>
+            </div>
 		</footer>
     </body>
 </html>
