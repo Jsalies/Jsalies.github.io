@@ -1,171 +1,240 @@
-/*------------haut du Site------------*/
+/*------------Corps du Site------------*/
 body
 {
     position: relative;
 	margin: 0px;
     height: 1600px;
-    background-image: url(images/fond.png);
-    background-size: 100% 100%;
-}/*corps du site*/
+}
 
 /*------------Menu du site---------*/
-#menu, #menu ul, #menuportable, #menuportable ul/* gestion du format des Listes */
-{       
+
+/*------------LOGO------------*/
+
+#logo{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 52px;
+    background: #d5cea6;
+    width: 159px;
+}
+#logo *{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 52px;
+}
+#logo a{
+    width: 155px;
+    list-style : none;
+    color: black;
+}
+#logo a:link{
+    text-decoration: none;
+    font-family: LearningCurve;
+}
+#logo a h1{
+    margin-left: 2px;
+    color: #000;
+}
+
+/*-------MENU--------*/
+
+/*====Menu ordinateur====*/
+#menu, #menu ul{       
         z-index: 1;
-        width: 100%;
         position: fixed;
         padding : 0px;  /* marge intérieure */
         margin : 0px;    /* ni extérieure */
         list-style : none; /* on supprime le style par défaut de la liste */
-        line-height : 35px; /* on définit une hauteur pour chaque élément */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
         text-align : center; /* on centre le texte qui se trouve dans la liste */
 }
-#menu, #menuportable /* style d'ecriture du menu */
-{
+#menu{
         font-weight : bold;
-        font-family : LearningCurve,Arial;
+        font-family : FFF,LearningCurve,Arial;
         font-size : 33px;
+        right: 0px;
+        left: 150px;
 }
-#menu a,#menuportable * /* Contenu des listes */
-{
+#menu a{
         display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
         padding : 0px; /* aucune marge intérieure */
-        background : #146; /* couleur de fond */        
-        color : #fff; /* couleur du texte */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
         text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
         width : 100%; /* largeur */
 }
-#menu li /* Elements des listes */      
-{ 
-        float : left; 
+#menu li{ 
+        float : right;
         /* pour IE qui ne reconnaît pas "transparent" */
-        border-right : 1px solid #fff; /* on met une bordure blanche à droite de chaque élément */
-        width: 19.92%;
+        border-right : 1px solid #000; /* on met une bordure blanche à droite de chaque élément */
+        width: 24.75%;
 }
-/* IE ne reconnaissant pas le sélecteur ">" */
-html>body #menu li
-{
-        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+html>body #menu li{
+        border: 1px solid #000 ; /* on met une bordure transparente à droite de chaque élément */
 }
-#menuportable ul li
-{
-        border-top: 1px solid white ; /* on met une bordure transparente à droite de chaque élément */
-}
-.lastmenu/* contre les changement de ligner lié aux dézooms*/
-{
-    margin-right: -15px;
-}
-#menu li ul, #menuportable ul /*ICI*/ /* Sous-listes */
-{ 
+#menu li ul{ 
         position: absolute; /* Position absolue */
-        width: 20%; /* Largeur des sous-listes */
+        width: 24.88%; /* Largeur des sous-listes */
         left: -999em; /* Hop, on envoie loin du champ de vision */
+        padding-left: 1px;
+        line-height: 35px;
 }
-#menu li ul li /* Éléments de sous-listes */
-{
+#menu li ul li{
         /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
-        border-top : 1px solid #fff; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
-    width: 100%
+    border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'un sous liste */
+    width: 100%;
+    border-top : 1px solid #000; /* on met une bordure transparente en haut de chaque élément */
+        
 }
-/* IE ne reconnaissant pas le sélecteur ">" */
-html>body #menu li ul li                
-{
-        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
-}
-#menu a:hover, #menuportable *:hover/*ICI*/ /* Lorsque la souris passe sur un des liens */    
-{
+#menu a:hover{
         color: #000; /* On passe le texte en noir... */
         background: #fff; /* ... et au contraire, le fond en blanc */
 }
-#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
-{
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul{
         left: auto; /* Repositionnement normal */
         min-height: 0; /* Corrige un bug sous IE */
 }
-#menuportable li:hover ul
-{
-        left: auto; /* Repositionnement normal */
-        min-height: 0; /* Corrige un bug sous IE */
+
+/*====Menu tablette====*/
+#menuportable, #menuportable ul{       
+        z-index: 1;
+        position: fixed;
+        padding : 0px;  /* marge intérieure */
+        margin : 0px;    /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+        font-weight : bold;
+        font-family : FFF,LearningCurve,Arial;
+        font-size : 33px;
+        left: 150px;
+        right: 0px;
+}
+#menuportable a{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0px; /* aucune marge intérieure */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 100%; /* largeur */
+}
+#menuportable li{
+        float : right;
+        /* pour IE qui ne reconnaît pas "transparent" */
         width: 100%;
+        border: 1px solid #000;
 }
-
-/*-------- Entete ----------*/
-#bandeau{
-    z-index: -1;
+#menuportable li ul{ 
+        position: absolute; /* Position absolue */
+        width: 100%; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+        padding-left: 1px;
+        line-height: 25px;
+}
+#menuportable li ul li{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
     width: 100%;
-    height: 180px;
 }
-.domaine{
-    z-index: 0;
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    font-family : LearningCurve,Arial;
-    font-size: 50px;
-    color: white;
+#menuportable a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menuportable li:hover ul, #menuportable li li:hover ul, #menuportable li.sfhover ul, #menuportable li li.sfhover ul{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
 }
 
+/*=====Menu Jeux======*/
+#jeux{
+    z-index: 1;
+    position:fixed;
+    top: 52px;
+    margin: 0px;
+    margin-top: px;
+    padding: 0px;
+}
+#jeux *{
+    margin: 0px;
+    padding: 0px;
+}
+#jeux li a{
+    display: block;
+    width: 137px;
+    height: 50px;
+    background : #d5cea6;
+    color: black;
+    border : 1px solid #000;
+}
+#jeux li a h2{
+    display: inline-block;
+    text-align: center;
+    width: 87px;
+    font-family: LifeSavers;
+    font-size: 17px;
+    vertical-align: super;
+}
+.logojeux{
+    height: 50px;
+    width: 50px;
+    right: 0px;
+}
+#jeux li a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
 /*----------- Pied de page ----------*/
 footer {
     width: 100%;
     position: absolute;
     background-image: url(images/footer.jpg);
-    height: 160px;
+    height: 80px;
     bottom: 0px;
-}
-footer #reseaux{
-    display: flex;
-}
-.social img{
-    width: 60px;
-}
-.social{
-    margin: auto;
-    margin-top: 50px;
 }
 #reseaux{
     position: absolute;
-    width: 35%;
-    right:20px;
-    
+    display: flex;
+    width: 250px;
+    right: 0px;
+}
+.social img{
+    width: 50px;
+}
+.social{
+    margin-left: 10px;
+    margin-top: 13px;
 }
 .youtube{
     margin-top: 10px
 }
-.footerbuttons{
+
+.footerbuttons h4{
     position: absolute;
-    display: flex;
-    left: 10px;
-    bottom: 10px;
-    width: 20%
-}
-.footerbuttons div{
-    margin-right: 32%;
-}
-.footerbuttons div a{
-    white-space:nowrap;
-    font-size: 18px;
-    font-family: Arial;
-    text-decoration: none;
-    color: black;
-    font-weight : lighter;
-    font-style: italic;
-}
-.rejoindre{
     display: block;
-    position: absolute;
-    right: 12.1%;
-    font-size: 19px;
-    top: 12px;
-    font-style: italic;
+    left: 5px;
+    bottom: 0px;
+    width: 400px;
+    font-size: 50px;
+    color:blanchedalmond;
+    height: 50px;
+    margin: 10px;
+    font-family: FFF;
 }
 /*-------nouvelle police ---------*/
 @font-face {
     font-family: "LearningCurve";
     src: url('polices/AlexBrush-Regular.ttf');
 }
-
-
+@font-face {
+    font-family: "FFF";
+    src: url("polices/FFF_Tusj.ttf");
+}
+@font-face {
+    font-family: "LifeSavers";
+    src: url('polices/LifeSavers-Regular.ttf');
+}
 /*--------Condition de responsive Websites---------*/
 /*Mode ordinateur*/
 @media all and (min-width: 992px)
@@ -176,37 +245,19 @@ footer #reseaux{
     }
 
 }
-/*condition pour un ordinateur un peu plus petit*/
-@media all and (max-width: 1400px) and  (min-width: 992px)
-{
-   #menu li /* Elements des listes */      
-    {
-        width: 19.89%;
-    }
-}
 /* condition telephone */
 @media all and (max-width: 767px)
 {
-        #menu /* Sous-listes */
+    #menu /* Sous-listes */
     { 
         display: none;
     }
-    .rejoindre{
-        position: static;
-        text-align: center;
+    #menuportable ul{
+        font-size: 17px;
     }
-    .footerbuttons{
-        display: none;
-    }
-        #reseaux{
-        position: static;
-        margin: auto;
-        width: auto;
-        margin-top: -20px;
-    }
-    .domaine{
-        display:none;
-    }
+    #jeux{
+    display: none;   
+}
 }
 /* condition tablette */
 @media all and (max-width: 991px) and  (min-width: 768px)
@@ -215,14 +266,17 @@ footer #reseaux{
 { 
         display: none;
 }
-    .rejoindre{
-        position: static;
-        text-align: center;
+    #jeux li a{
+        width: 50px;
     }
-    #reseaux{
-        position: static;
-        margin: auto;
-
-        margin-top: -20px;
+#jeux li a h2{
+    display: none;   
+}
+}
+/*affichage nom footer*/
+@media all and (max-width: 610px)
+{
+.footerbuttons h4{
+        display:none;
     }
 }
