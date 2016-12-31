@@ -4,6 +4,9 @@ body
     position: relative;
 	margin: 0px;
     height: 1600px;
+    background-image: linear-gradient(rgba(0,0,255,0.3),rgba(255,255,255,0))
+}
+#background_opacity{
 }
 /*------------Menu du site---------*/
 
@@ -210,11 +213,16 @@ html>body #menu li{
     top: 52px;
     left: 52px;
     right: 0px;
-    bottom: 80px;
+    top: 59px;
+    bottom: 86px;
 }
-#content ul{
-    width: 70%;
+#usefularea{
     margin: auto;
+    width: 70%;
+    background: white;
+    max-width: 865px;
+    height: 100%;
+    box-shadow: 1px 1px 12px #555;
 }
 /*=======Diapo=======*/
 .slides {
