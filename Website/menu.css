@@ -13,13 +13,14 @@ body
 /*------------LOGO------------*/
 
 #logo{
+    opacity: 0.9;
     z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: row;
     height: 51px;
     background: #d5cea6;
-    width: 159px;
+    width: 156px;
     border-bottom: 1px solid #000;
 }
 #logo *{
@@ -48,7 +49,8 @@ body
 
 /*====Menu ordinateur====*/
 
-#menu, #menu ul{       
+#menu, #menu ul{
+        opacity: 0.9;
         z-index: 1;
         position: fixed;
         padding : 0px;  /* marge intérieure */
@@ -106,7 +108,8 @@ html>body #menu li{
 
 /*====Menu tablette====*/
 
-#menuportable, #menuportable ul{       
+#menuportable, #menuportable ul{
+        opacity: 0.9;
         z-index: 1;
         position: fixed;
         padding : 0px;  /* marge intérieure */
@@ -157,6 +160,7 @@ html>body #menu li{
 
 /*=====Menu Jeux======*/
 #menujeux{
+    opacity: 0.9;
     z-index: 1;
     position:fixed;
     top: 51px;
@@ -217,6 +221,7 @@ html>body #menu li{
     bottom: 86px;
 }
 #usefularea{
+    opacity: 0.8;
     margin: auto;
     width: 70%;
     background: white;
@@ -232,6 +237,7 @@ html>body #menu li{
   width: 100%;
   padding: 0;
   margin: 0;
+  max-width: 865px;
   }
 .slides li {
   -webkit-backface-visibility: hidden;
@@ -271,10 +277,15 @@ html>body #menu li{
     text-align: right;
     font-family:fantasy;
   }
-
+/*=======Contexte========*/
+#usefularea h2{
+    margin-top: 13px;
+    font-family: LearningCurve;
+    text-align: center;
+    font-size: 40px
+}
 /*----------- Pied de page ----------*/
 footer {
-    z-index: 1;
     left: 52px;
     right: 0px;
     position: absolute;
@@ -360,9 +371,18 @@ footer {
     #jeux{
         width: 130%;
     }
-#jeux li a h2{
-    display: none;   
-}
+    #usefularea{
+        width: 88%;
+    }
+    .textslide{
+        font-size: 16px;
+    }
+    #logo{
+        width: 151px;
+    }
+    #jeux li a h2{
+        display: none;   
+    }
 }
 /* condition tablette */
 @media all and (max-width: 991px) and  (min-width: 768px)
@@ -375,14 +395,17 @@ footer {
         width: 53px;
     }
     #jeux li a{
-        width: 97.3%;
+        width: 97.32%;
     }
     #jeux{
         width: 130%;
     }
-#jeux li a h2{
-    display: none;   
-}
+    #jeux li a h2{
+        display: none;   
+    } 
+    #logo{
+        width: 151px;
+    }
 }
 /*affichage nom footer*/
 @media all and (max-width: 660px)
