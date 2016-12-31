@@ -3,11 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="menu.css" />
-        <script type="text/javascript" src="java"> </script>
-        <title>Agora-Games Plateforme pour les gamers</title>
+        <script src="JS/jquery-3.1.1.js"></script>
+        <script src="JS/responsiveslides.js"></script>
+        <title>Agora-Games: Accueil</title>
+        <script src="JS/diapo.js"></script>
     </head>
 
     <body>
+        <!-- Tete de page -->
     	<header>
     		<nav>
                 <div id="logo"><a href="index.html"><img  src="images/logo.png"><h1>Agora Games</h1>
@@ -49,24 +52,34 @@
                 <!-- menu jeux -->
                 <div id="menujeux">
                 <ul id="jeux">
-                    <li><a href="Lol.html"><h2>League of Legends</h2><img class="logojeux" src="images/logojeux/lollogo.png"></a></li>
-                    <li><a href="CivVI.html"><h2>Civilization VI</h2><img class="logojeux" src="images/logojeux/civVIlogo.png"></a></li>
-                    <li><a href="Minecraft.html"><h2>Minecraft</h2><img class="logojeux" src="images/logojeux/minecraftlogo.png"></a></li>
-                    <li><a href="Overwatch.html"><h2>Overwatch</h2><img class="logojeux" src="images/logojeux/overwatchlogo.png"></a></li>
-                    <li><a href="Hearthstone.html"><h2>Hearthstone</h2><img class="logojeux" src="images/logojeux/hearthstonelogo.png"></a></li>
-                    <li><a href="WoW.html"><h2>World of Warcraft</h2><img class="logojeux" src="images/logojeux/wowlogo.png"></a></li>
-                    <li><a href="hots.html"><h2>Heroes of the storm</h2><img class="logojeux" src="images/logojeux/hotslogo.png"></a></li>
-                    <li><a href="rl.html"><h2>rocket league</h2><img class="logojeux" src="images/logojeux/rllogo.png"></a></li>
-                    <li><a href="starcraftII.html"><h2>starcraft II</h2><img class="logojeux" src="images/logojeux/starcraftIIlogo.png"></a></li>
-                    <li><a href="teso.html"><h2>the elders scroll online</h2><img class="logojeux" src="images/logojeux/esologo.png"></a></li>
-                    <li><a href="smite.html"><h2>Smite</h2><img class="logojeux" src="images/logojeux/smitelogo.png"></a></li>
-                    <li><a href="csgo.html"><h2>Counter Strike</h2><img class="logojeux" src="images/logojeux/cslogo.png"></a></li>
-                    <li><a href="d3.html"><h2>diablo III</h2><img class="logojeux" src="images/logojeux/d3logo.png"></a></li>
+                    <li><a href="Lol.html"><h2>League of Legends</h2><img class="logojeux" src="images/logojeux/lollogo-min.png"></a></li>
+                    <li><a href="CivVI.html"><h2>Civilization VI</h2><img class="logojeux" src="images/logojeux/civVIlogo-min.png"></a></li>
+                    <li><a href="Minecraft.html"><h2>Minecraft</h2><img class="logojeux" src="images/logojeux/minecraftlogo-min.png"></a></li>
+                    <li><a href="Overwatch.html"><h2>Overwatch</h2><img class="logojeux" src="images/logojeux/overwatchlogo-min.png"></a></li>
+                    <li><a href="Hearthstone.html"><h2>Hearthstone</h2><img class="logojeux" src="images/logojeux/hearthstonelogo-min.png"></a></li>
+                    <li><a href="WoW.html"><h2>World of Warcraft</h2><img class="logojeux" src="images/logojeux/wowlogo-min.png"></a></li>
+                    <li><a href="hots.html"><h2>Heroes of the storm</h2><img class="logojeux" src="images/logojeux/hotslogo-min.png"></a></li>
+                    <li><a href="rl.html"><h2>rocket league</h2><img class="logojeux" src="images/logojeux/rllogo-min.png"></a></li>
+                    <li><a href="starcraftII.html"><h2>starcraft II</h2><img class="logojeux" src="images/logojeux/starcraftIIlogo-min.png"></a></li>
+                    <li><a href="teso.html"><h2>the elders scroll online</h2><img class="logojeux" src="images/logojeux/esologo-min.png"></a></li>
+                    <li><a href="smite.html"><h2>Smite</h2><img class="logojeux" src="images/logojeux/smitelogo-min.png"></a></li>
+                    <li><a href="csgo.html"><h2>Counter Strike</h2><img class="logojeux" src="images/logojeux/cslogo-min.png"></a></li>
+                    <li><a href="d3.html"><h2>diablo III</h2><img class="logojeux" src="images/logojeux/d3logo-min.png"></a></li>
                 </ul>
                 </div>
             </nav>
 		</header>
         
+        <!-- Diapo -->
+        <div id="content">
+            <ul class="slides">
+                <li><img src="images/diapo/accueil/WorldOfWarcraft.jpg"></li>
+                <li><img src="images/diapo/accueil/LeagueOfLegends.jpg"></li>
+                <li><img src="images/diapo/accueil/Minecraft.jpg"></li>
+                <li><img src="images/diapo/accueil/RocketLeague.jpg"></li>
+            </ul>
+        </div>
+        <!-- Pied de page -->
 		<footer>
             <!-- boutons pour remonter etc... -->
             <div class="footerbuttons">
@@ -75,13 +88,13 @@
     		<!-- reseaux sociaux -->
             <div id="reseaux">
             <div class="social">
-            <a href="https://www.facebook.com"><img src="images/reseauxlogo/facebook.png"></a>
+            <a href="https://www.facebook.com"><img src="images/reseauxlogo/facebook-min.png"></a>
             </div><div class="social">
-            <a href="https://plus.google.com"><img src="images/reseauxlogo/nouveau-logo-google-plus-rond.png"></a>
+            <a href="https://plus.google.com"><img src="images/reseauxlogo/nouveau-logo-google-plus-rond-min.png"></a>
             </div><div class="social">
-            <a href="https://twitter.com/"><img src="images/reseauxlogo/twitter-logo-final.png"></a>
+            <a href="https://twitter.com/"><img src="images/reseauxlogo/twitter-logo-final-min.png"></a>
             </div><div class="social">
-            <a href="https://www.youtube.com/"><img class="youtube" src="images/reseauxlogo/YouTube-icon-full_color.png"></a>
+            <a href="https://www.youtube.com/"><img class="youtube" src="images/reseauxlogo/YouTube-icon-full_color-min.png"></a>
             </div>
             </div>
 		</footer>

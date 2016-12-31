@@ -10,6 +10,7 @@ body
 /*------------LOGO------------*/
 
 #logo{
+    z-index: 1;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -150,10 +151,10 @@ html>body #menu li{
 #menujeux{
     z-index: 1;
     position:fixed;
-    top: 52px;
+    top: 51px;
     margin: 0px;
     padding: 0px;
-    bottom: 78px;
+    bottom: 79px;
     overflow: hidden;
     width: 139px;
     border-top : 1px solid #000;
@@ -196,6 +197,49 @@ html>body #menu li{
         color: #000; /* On passe le texte en noir... */
         background: #fff; /* ... et au contraire, le fond en blanc */
 }
+
+/*------------Contenu --------------*/
+/*=======Diapo=======*/
+#content{
+    position: absolute;
+    top: 52px;
+    left: 52px;
+    right: 0px;
+    bottom: 80px;
+}
+.slides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.slides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.slides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.slides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+
 /*----------- Pied de page ----------*/
 footer {
     width: 100%;
@@ -233,6 +277,7 @@ footer {
     margin: 10px;
     font-family: FFF;
 }
+
 /*-------nouvelle police ---------*/
 @font-face {
     font-family: "LearningCurve";
@@ -246,6 +291,7 @@ footer {
     font-family: "LifeSavers";
     src: url('polices/LifeSavers-Regular.ttf');
 }
+
 /*--------Condition de responsive Websites---------*/
 /*Mode ordinateur*/
 @media all and (min-width: 992px)
@@ -253,6 +299,9 @@ footer {
     #menuportable /* Sous-listes */
     { 
         display: none;
+    }
+    #content{
+        left: 139px;
     }
 
 }
@@ -267,6 +316,15 @@ footer {
         font-size: 17px;
     }
     #menujeux{
+        width: 53px;
+    }
+    #jeux li a{
+        width: 97.3%;
+    }
+    #jeux{
+        width: 130%;
+    }
+#jeux li a h2{
     display: none;   
 }
 }
