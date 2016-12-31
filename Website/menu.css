@@ -5,7 +5,6 @@ body
 	margin: 0px;
     height: 1600px;
 }
-
 /*------------Menu du site---------*/
 
 /*------------LOGO------------*/
@@ -76,7 +75,7 @@ html>body #menu li{
 }
 #menu li ul{ 
         position: absolute; /* Position absolue */
-        width: 24.88%; /* Largeur des sous-listes */
+        width: 24.75%; /* Largeur des sous-listes */
         left: -999em; /* Hop, on envoie loin du champ de vision */
         padding-left: 1px;
         line-height: 35px;
@@ -148,13 +147,25 @@ html>body #menu li{
 }
 
 /*=====Menu Jeux======*/
-#jeux{
+#menujeux{
     z-index: 1;
     position:fixed;
     top: 52px;
     margin: 0px;
-    margin-top: px;
     padding: 0px;
+    bottom: 78px;
+    overflow: hidden;
+    width: 139px;
+    border-top : 1px solid #000;
+    border-bottom : 1px solid #000;
+}
+#jeux{
+    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
+    width: 112.5%;
+    height: 103%;
 }
 #jeux *{
     margin: 0px;
@@ -255,7 +266,7 @@ footer {
     #menuportable ul{
         font-size: 17px;
     }
-    #jeux{
+    #menujeux{
     display: none;   
 }
 }
@@ -266,8 +277,14 @@ footer {
 { 
         display: none;
 }
+    #menujeux{
+        width: 53px;
+    }
     #jeux li a{
-        width: 50px;
+        width: 97.3%;
+    }
+    #jeux{
+        width: 130%;
     }
 #jeux li a h2{
     display: none;   
