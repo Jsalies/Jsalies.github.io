@@ -14,9 +14,10 @@ body
     position: fixed;
     display: flex;
     flex-direction: row;
-    height: 52px;
+    height: 51px;
     background: #d5cea6;
     width: 159px;
+    border-bottom: 1px solid #000;
 }
 #logo *{
     display: flex;
@@ -36,11 +37,14 @@ body
 #logo a h1{
     margin-left: 2px;
     color: #000;
+    font-size: 23px;
+    margin-left: 5px;
 }
 
 /*-------MENU--------*/
 
 /*====Menu ordinateur====*/
+
 #menu, #menu ul{       
         z-index: 1;
         position: fixed;
@@ -98,6 +102,7 @@ html>body #menu li{
 }
 
 /*====Menu tablette====*/
+
 #menuportable, #menuportable ul{       
         z-index: 1;
         position: fixed;
@@ -154,11 +159,11 @@ html>body #menu li{
     top: 51px;
     margin: 0px;
     padding: 0px;
-    bottom: 79px;
+    bottom: 0px;
     overflow: hidden;
     width: 139px;
     border-top : 1px solid #000;
-    border-bottom : 1px solid #000;
+    background: #d5cea6;
 }
 #jeux{
     z-index: 1;
@@ -166,7 +171,7 @@ html>body #menu li{
     padding: 0px;
     overflow: scroll;
     width: 112.5%;
-    height: 103%;
+    height: 102.4%;
 }
 #jeux *{
     margin: 0px;
@@ -201,6 +206,7 @@ html>body #menu li{
 /*------------Contenu --------------*/
 /*=======Diapo=======*/
 #content{
+    z-index: 0;
     position: absolute;
     top: 52px;
     left: 52px;
@@ -215,7 +221,6 @@ html>body #menu li{
   padding: 0;
   margin: 0;
   }
-
 .slides li {
   -webkit-backface-visibility: hidden;
   position: absolute;
@@ -224,13 +229,11 @@ html>body #menu li{
   left: 0;
   top: 0;
   }
-
 .slides li:first-child {
   position: relative;
   display: block;
   float: left;
   }
-
 .slides img {
   display: block;
   height: auto;
@@ -239,10 +242,11 @@ html>body #menu li{
   border: 0;
   }
 
-
 /*----------- Pied de page ----------*/
 footer {
-    width: 100%;
+    z-index: 1;
+    left: 52px;
+    right: 0px;
     position: absolute;
     background-image: url(images/footer.jpg);
     height: 80px;
@@ -264,7 +268,6 @@ footer {
 .youtube{
     margin-top: 10px
 }
-
 .footerbuttons h4{
     position: absolute;
     display: block;
@@ -303,6 +306,9 @@ footer {
     #content{
         left: 139px;
     }
+    footer {
+        left: 139px;
+    }
 
 }
 /* condition telephone */
@@ -319,7 +325,7 @@ footer {
         width: 53px;
     }
     #jeux li a{
-        width: 97.3%;
+        width: 97.32%;
     }
     #jeux{
         width: 130%;
@@ -349,7 +355,7 @@ footer {
 }
 }
 /*affichage nom footer*/
-@media all and (max-width: 610px)
+@media all and (max-width: 660px)
 {
 .footerbuttons h4{
         display:none;
