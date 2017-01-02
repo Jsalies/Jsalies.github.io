@@ -74,6 +74,8 @@ body
         color : #000; /* couleur du texte */
         text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
         width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
 }
 #menu li{ 
         float : right;
@@ -85,11 +87,14 @@ html>body #menu li{
         border: 1px solid #000 ; /* on met une bordure transparente à droite de chaque élément */
 }
 #menu li ul{ 
+        opacity: 0;
         position: absolute; /* Position absolue */
         width: 24.75%; /* Largeur des sous-listes */
-        left: -999em; /* Hop, on envoie loin du champ de vision */
+        visibility: hidden; /* Hop, on envoie loin du champ de vision */
         padding-left: 1px;
         line-height: 35px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
 }
 #menu li ul li{
         /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
@@ -103,11 +108,12 @@ html>body #menu li{
         background: #fff; /* ... et au contraire, le fond en blanc */
 }
 #menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul{
-        left: auto; /* Repositionnement normal */
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9; /* Repositionnement normal */
         min-height: 0; /* Corrige un bug sous IE */
 }
 
-/*====Menu tablette====*/
+/*====Menu tablette et telephone====*/
 
 #menuportable, #menuportable ul{
         opacity: 0.9;
@@ -131,6 +137,8 @@ html>body #menu li{
         color : #000; /* couleur du texte */
         text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
         width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
 }
 #menuportable li{
         float : right;
@@ -138,12 +146,18 @@ html>body #menu li{
         width: 100%;
         border: 1px solid #000;
 }
-#menuportable li ul{ 
+#menuportable li ul{
+        opacity: 0;
+        visibility: hidden; 
         position: absolute; /* Position absolue */
         width: 100%; /* Largeur des sous-listes */
-        left: -999em; /* Hop, on envoie loin du champ de vision */
+        top: 51px; /* Hop, on envoie loin du champ de vision */
+        left: -1px;
         padding-left: 1px;
         line-height: 25px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
+        
 }
 #menuportable li ul li{
         /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
@@ -155,14 +169,15 @@ html>body #menu li{
         background: #fff; /* ... et au contraire, le fond en blanc */
 }
 #menuportable li:hover ul, #menuportable li li:hover ul, #menuportable li.sfhover ul, #menuportable li li.sfhover ul{
-        left: auto; /* Repositionnement normal */
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9;
         min-height: 0; /* Corrige un bug sous IE */
 }
 
 /*=====Menu Jeux======*/
 #menujeux{
-    opacity: 0.9;
     z-index: 1;
+    opacity: 0.9;
     position:fixed;
     top: 51px;
     margin: 0px;
@@ -174,7 +189,6 @@ html>body #menu li{
     background: #d5cea6;
 }
 #jeux{
-    z-index: 1;
     margin: 0px;
     padding: 0px;
     overflow: scroll;
@@ -193,6 +207,8 @@ html>body #menu li{
     background : #d5cea6;
     color: black;
     border : 1px solid #000;
+    transition-property: background-color;
+    transition-duration: 0.5s; /* La transition dure 1s */
 }
 #jeux li a h2{
     display: inline-block;
