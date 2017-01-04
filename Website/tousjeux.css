@@ -1,0 +1,317 @@
+/*------------Corps du Site------------*/
+body
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+	margin: 0px;
+    min-height: 900px;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,255,0.3),rgba(255,255,255,0))
+}
+/*------------Menu du site---------*/
+
+/*------------LOGO------------*/
+
+#logo{
+    opacity: 0.9;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 51px;
+    background: #d5cea6;
+    width: 156px;
+    border-bottom: 1px solid #000;
+}
+#logo *{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 52px;
+}
+#logo a{
+    width: 155px;
+    list-style : none;
+    color: black;
+}
+#logo a:link{
+    text-decoration: none;
+    font-family: LearningCurve;
+}
+#logo a h1{
+    margin-left: 2px;
+    color: #000;
+    font-size: 23px;
+    margin-left: 5px;
+}
+
+/*-------MENU--------*/
+
+/*====Menu ordinateur====*/
+
+#menu, #menu ul{
+        opacity: 0.9;
+        z-index: 1;
+        position: fixed;
+        padding : 0px;  /* marge intérieure */
+        margin : 0px;    /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+#menu{
+        font-weight : bold;
+        font-family : FFF,LearningCurve,Arial;
+        font-size : 33px;
+        right: 0px;
+        left: 150px;
+}
+#menu a{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0px; /* aucune marge intérieure */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menu li{ 
+        float : right;
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 1px solid #000; /* on met une bordure blanche à droite de chaque élément */
+        width: 24.75%;
+}
+html>body #menu li{
+        border: 1px solid #000 ; /* on met une bordure transparente à droite de chaque élément */
+}
+#menu li ul{ 
+        opacity: 0;
+        position: absolute; /* Position absolue */
+        width: 24.75%; /* Largeur des sous-listes */
+        visibility: hidden; /* Hop, on envoie loin du champ de vision */
+        padding-left: 1px;
+        line-height: 35px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menu li ul li{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+    border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'un sous liste */
+    width: 100%;
+    border-top : 1px solid #000; /* on met une bordure transparente en haut de chaque élément */
+        
+}
+#menu a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul{
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+/*====Menu tablette et telephone====*/
+
+#menuportable, #menuportable ul{
+        opacity: 0.9;
+        z-index: 1;
+        position: fixed;
+        padding : 0px;  /* marge intérieure */
+        margin : 0px;    /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+        font-weight : bold;
+        font-family : FFF,LearningCurve,Arial;
+        font-size : 33px;
+        left: 150px;
+        right: 0px;
+}
+#menuportable a{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0px; /* aucune marge intérieure */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menuportable li{
+        float : right;
+        /* pour IE qui ne reconnaît pas "transparent" */
+        width: 100%;
+        border: 1px solid #000;
+}
+#menuportable li ul{
+        opacity: 0;
+        visibility: hidden; 
+        position: absolute; /* Position absolue */
+        width: 100%; /* Largeur des sous-listes */
+        top: 51px; /* Hop, on envoie loin du champ de vision */
+        left: -1px;
+        padding-left: 1px;
+        line-height: 25px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
+        
+}
+#menuportable li ul li{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+    width: 100%;
+}
+#menuportable a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menuportable li:hover ul, #menuportable li li:hover ul, #menuportable li.sfhover ul, #menuportable li li.sfhover ul{
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9;
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+/*------------Contenu --------------*/
+#content{
+    flex-grow: 1;
+    z-index: 0;
+    top: 59px;   
+}
+#visiblearea{
+    margin-top: 55px;
+}
+#usefularea{
+    opacity: 0.8;
+    margin: auto;
+    width: 70%;
+    background: white;
+    max-width: 865px;
+    height: 100%;
+    box-shadow: 1px 1px 12px #555;
+    margin-bottom: 5px;
+}
+#usefularea h2{
+    display: block;
+    font-family: FFF;
+    font-style: italic;
+    font-size: 50px;
+    padding-top: 25px;
+    text-align: center;
+}
+#usefularea div{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 22px;
+}
+#usefularea div div{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+#usefularea div img{
+    margin: auto;
+    width: 100%;
+    border-radius: 15px;
+    border: 3px inset #009;
+    margin-left: -2px;
+}
+
+/*----------- Pied de page ----------*/
+footer {
+    background-image: url(images/footer.jpg);
+    height: 80px;
+}
+#reseaux{
+    position: absolute;
+    display: flex;
+    width: 250px;
+    right: 0px;
+}
+.social img{
+    width: 50px;
+}
+.social{
+    margin-left: 10px;
+    margin-top: 13px;
+}
+.youtube{
+    margin-top: 10px
+}
+.footerbuttons h4{
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width: 400px;
+    font-size: 50px;
+    color:blanchedalmond;
+    height: 50px;
+    margin: 10px;
+    font-family: FFF;
+}
+
+/*-------nouvelle police ---------*/
+@font-face {
+    font-family: "LearningCurve";
+    src: url('polices/AlexBrush-Regular.ttf');
+}
+@font-face {
+    font-family: "FFF";
+    src: url("polices/FFF_Tusj.ttf");
+}
+@font-face {
+    font-family: "LifeSavers";
+    src: url('polices/LifeSavers-Regular.ttf');
+}
+
+/*--------Condition de responsive Websites---------*/
+/*Mode ordinateur*/
+@media all and (min-width: 992px)
+{
+    #menuportable /* Sous-listes */
+    { 
+        display: none;
+    }
+    #usefularea div{
+        width: 49.7%;
+    }
+
+}
+/* condition telephone */
+@media all and (max-width: 767px)
+{
+    #menu /* Sous-listes */
+    { 
+        display: none;
+    }
+    #menuportable ul{
+        font-size: 17px;
+    }
+    #usefularea{
+        width: 88%;
+    }
+    #logo{
+        width: 151px;
+    }
+}
+/* condition tablette */
+@media all and (max-width: 991px) and  (min-width: 768px)
+{
+    #menu /* Sous-listes */
+    { 
+        display: none;
+}
+    #logo{
+        width: 151px;
+    }
+}
+/*affichage nom footer*/
+@media all and (max-width: 600px)
+{
+.footerbuttons h4{
+        display:none;
+    }
+}
