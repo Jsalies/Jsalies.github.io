@@ -33,5 +33,5 @@ function second() {
     $('#6').append('Hobbies : jeux video, mathematiques');
 };
 
-element1.addEventListener('mouseover',premier());
-element2.addEventListener('mouseover',second());
+element1.addEventListener('mouseover',premier);
+element2.addEventListener('mouseover',second);
