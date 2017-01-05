@@ -1,0 +1,567 @@
+/*------------Corps du Site------------*/
+body
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+	margin: 0px;
+    min-height: 900px;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,255,0.3),rgba(255,255,255,0))
+}
+/*------------Menu du site---------*/
+
+/*------------LOGO------------*/
+
+#logo{
+    opacity: 0.9;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 51px;
+    background: #d5cea6;
+    width: 156px;
+    border-bottom: 1px solid #000;
+}
+#logo *{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 52px;
+}
+#logo a{
+    width: 155px;
+    list-style : none;
+    color: black;
+}
+#logo a:link{
+    text-decoration: none;
+    font-family: LearningCurve;
+}
+#logo a h1{
+    margin-left: 2px;
+    color: #000;
+    font-size: 23px;
+    margin-left: 5px;
+}
+
+/*-------MENU--------*/
+
+/*====Menu ordinateur====*/
+
+#menu, #menu ul{
+        opacity: 0.9;
+        z-index: 1;
+        position: fixed;
+        padding : 0px;  /* marge intérieure */
+        margin : 0px;    /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+}
+#menu{
+        font-weight : bold;
+        font-family : FFF,LearningCurve,Arial;
+        font-size : 33px;
+        right: 0px;
+        left: 150px;
+}
+#menu a{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0px; /* aucune marge intérieure */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menu li{ 
+        float : right;
+        /* pour IE qui ne reconnaît pas "transparent" */
+        border-right : 1px solid #000; /* on met une bordure blanche à droite de chaque élément */
+        width: 24.75%;
+}
+html>body #menu li{
+        border: 1px solid #000 ; /* on met une bordure transparente à droite de chaque élément */
+}
+#menu li ul{ 
+        opacity: 0;
+        position: absolute; /* Position absolue */
+        width: 24.75%; /* Largeur des sous-listes */
+        visibility: hidden; /* Hop, on envoie loin du champ de vision */
+        padding-left: 1px;
+        line-height: 35px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menu li ul li{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+    border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'un sous liste */
+    width: 100%;
+    border-top : 1px solid #000; /* on met une bordure transparente en haut de chaque élément */
+        
+}
+#menu a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menu li:hover ul, #menu li li:hover ul, #menu li.sfhover ul, #menu li li.sfhover ul{
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+/*====Menu tablette et telephone====*/
+
+#menuportable, #menuportable ul{
+        opacity: 0.9;
+        z-index: 1;
+        position: fixed;
+        padding : 0px;  /* marge intérieure */
+        margin : 0px;    /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 50px; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+        font-weight : bold;
+        font-family : FFF,LearningCurve,Arial;
+        font-size : 33px;
+        left: 150px;
+        right: 0px;
+}
+#menuportable a{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0px; /* aucune marge intérieure */
+        background : #d5cea6; /* couleur de fond */        
+        color : #000; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 100%; /* largeur */
+        transition-property: background-color;
+        transition-duration: 0.5s; /* La transition dure 1s */
+}
+#menuportable li{
+        float : right;
+        /* pour IE qui ne reconnaît pas "transparent" */
+        width: 100%;
+        border: 1px solid #000;
+}
+#menuportable li ul{
+        opacity: 0;
+        visibility: hidden; 
+        position: absolute; /* Position absolue */
+        width: 100%; /* Largeur des sous-listes */
+        top: 51px; /* Hop, on envoie loin du champ de vision */
+        left: -1px;
+        padding-left: 1px;
+        line-height: 25px;
+        transition-property: opacity;
+        transition-duration: 0.5s; /* La transition dure 1s */
+        
+}
+#menuportable li ul li{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        border-top : 1px solid #000; /* on met une bordure blanche en haut de chaque élément d'une sous liste */
+    width: 100%;
+}
+#menuportable a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#menuportable li:hover ul, #menuportable li li:hover ul, #menuportable li.sfhover ul, #menuportable li li.sfhover ul{
+        visibility: visible; /* Repositionnement normal */
+        opacity: 0.9;
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+#menujeux{
+    z-index: 1;
+    opacity: 0.9;
+    position: fixed;
+    top: 51px;
+    margin: 0px;
+    padding: 0px;
+    bottom: 0px;
+    overflow: auto;
+    width: 139px;
+    border-top : 1px solid #000;
+    background: #d5cea6;
+    overflow: hidden;
+    bottom: 0px;
+}
+#ListCiv{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 112.5%;
+    bottom: 0px;
+    height: 100%;
+}
+#CivLeaders{
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    height: 100%;
+}
+#CivLeaders *{
+    margin: 0px;
+    padding: 0px;
+}
+#CivLeaders li a{
+    display: block;
+    width: 137px;
+    height: 50px;
+    background : #d5cea6;
+    color: black;
+    border : 1px solid #000;
+    transition-property: background-color;
+    transition-duration: 0.5s; /* La transition dure 1s */
+}
+#CivLeaders li span{
+    display: inline-block;
+    text-align: center;
+    width: 87px;
+    font-family: LifeSavers;
+    font-size: 17px;
+    vertical-align: super;
+}
+#CivLeaders img{
+    height: 50px;
+    width: 50px;
+    right: 0px;
+}
+#CivLeaders li a:hover{
+        color: #000; /* On passe le texte en noir... */
+        background: #fff; /* ... et au contraire, le fond en blanc */
+}
+#corps{
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    margin-top: 30px;
+}
+section {
+    margin-top: 10px;
+
+}
+#video{
+    margin: auto;
+    width: 80%;
+    height: 350px;
+    box-shadow: 3px 3px 3px black ;
+}
+article{
+    width: 100%;
+    margin-right: -3%;
+    margin-left: 20px;
+    text-indent: 25px;
+}
+article h2 {
+     text-indent: 0px;
+	font-family: FFF;
+	  text-transform: uppercase;
+}
+article p{
+    text-align: justify;
+}
+aside{
+    width: 30%;
+}
+#asideImg img{
+    width: 100%;
+}
+#asideImg
+{
+    margin: auto;
+}
+#mapage{
+    width: 80%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+}
+#presentationImg  img{
+    height: 20px;
+    width: 20px;
+    
+}
+#presentationImg  span{
+       margin-left: 3px;
+       margin-bottom: : 5px;
+
+}
+#content{
+    flex-grow: 1;
+    z-index: 0;
+    top: 59px;
+    min-height: 1000px;   
+}
+#visiblearea{
+    margin-top: 55px;
+    margin-left: 51px;
+    height: 100%;
+}
+#usefularea{
+    padding-top: 10px;
+    opacity: 0.8;
+    height: 100%;
+    margin: auto;
+    width: 70%;
+    background: white;
+    max-width: 865px;
+    height: 100%;
+    box-shadow: 1px 1px 12px #555;
+    margin-bottom: 5px;
+    display: flex;
+}
+#article{
+    display: flex;
+}
+
+.slides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: 865px;
+  }
+.slides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+.slides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+.slides img {
+    width: 100px;
+    height: 200px;
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+footer {
+    background-image: url(images/footer.jpg);
+    height: 80px;
+    margin-left: 139px;
+}
+#reseaux{
+    position: absolute;
+    display: flex;
+    width: 250px;
+    right: 0px;
+}
+.social img{
+    width: 50px;
+}
+.social{
+    margin-left: 10px;
+    margin-top: 13px;
+}
+.youtube{
+    margin-top: 10px
+}
+.footerbuttons h4{
+    position: absolute;
+    display: block;
+    left: 150px;
+    bottom: 0px;
+    width: 400px;
+    font-size: 50px;
+    color:blanchedalmond;
+    height: 50px;
+    margin: 10px;
+    font-family: FFF;
+}
+
+
+/*-------nouvelle police ---------*/
+@font-face {
+    font-family: "LearningCurve";
+    src: url('polices/AlexBrush-Regular.ttf');
+}
+@font-face {
+    font-family: "FFF";
+    src: url("polices/FFF_Tusj.ttf");
+}
+@font-face {
+    font-family: "LifeSavers";
+    src: url('polices/LifeSavers-Regular.ttf');
+}
+@font-face {
+    font-family: 'almendra_scbold';
+    src: url('polices/almendrasc-bold-webfont.woff2') format('woff2'),
+         url('polices/almendrasc-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'after_shokregular';
+    src: url('polices/after_shok-webfont.woff2') format('woff2'),
+         url('polices/after_shok-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*Mode ordinateur*/
+@media all and (min-width: 992px)
+{
+    #menuportable /* Sous-listes */
+    { 
+        display: none;
+    }
+    #visiblearea{
+        margin-left: 139px;
+    }
+    
+    footer {
+        margin-left: 139px;
+    }
+    .footerbuttons{
+        left: 60px;
+    }
+
+}
+/* condition telephone */
+@media all and (max-width: 767px)
+{
+
+    #menu /* Sous-listes */
+    { 
+        display: none;
+    }
+    #menuportable ul{
+        font-size: 17px;
+    }
+    #menujeux{
+        width: 64px;
+        margin-left: -10px;
+    }
+    #ListCiv{
+        width: 80px;
+    }
+    #visiblearea{
+        margin-left: 64px;
+    }
+    #usefularea{
+        width: 87%;
+    }
+    #CivLeaders li a{
+        width: 97.32%;
+    }
+    #CivLeaders{
+
+        width: 100%;
+    }
+     #CivLeaders img{
+        
+       margin-left: 10px;
+    }
+    .textslide{
+        font-size: 16px;
+    }
+    #logo{
+        width: 151px;
+    }
+    #CivLeaders li a span{
+        display: none;   
+    }
+    footer{
+        margin-left: 53px;
+    }
+    .footerbuttons h4{
+        left: 48px;
+    }
+}
+/* condition tablette */
+@media all and (max-width: 991px) and  (min-width: 768px)
+{
+#menu /* Sous-listes */
+{ 
+        display: none;
+}
+    #visiblearea{
+        margin-left: 139px;
+    }
+    #ListCiv{
+        width: 157px;
+    }
+    #jeux li a{
+        width: 97.32%;
+    }
+    #CivLeaders{
+        width: 100%;
+    }
+    #CivLeaders li a h2{
+        display: none;   
+    } 
+    #CivLeaders{
+        width: 100%;
+    }
+}
+/*affichage nom footer*/
+@media all and (max-width: 660px)
+{
+	#article{
+    display: flex;
+    flex-direction: column-reverse;
+        
+}
+article{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    text-indent: 25px;
+}
+    .footerbuttons h4{
+        display:none;
+    }
+}
+aside{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+
+}
+::-webkit-scrollbar { /* Scrollbars */
+    width: 0px;
+    height: 0px;
+    background-color: rgb(238, 238, 238);
+}
+#warning{
+	font-family: after_shokregular;
+	height: 500px;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 30px;
+
+}
+#imageconstruction{
+	width: 100%;
+	height: 500px;
+}
+#imageconstruction img{
+	width: 100%;
+	height: 100%;
+}
+#x{
+	width: 100%;
+}
