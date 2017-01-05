@@ -314,6 +314,9 @@ footer {
     #logo{
         width: 151px;
     }
+    .modo{
+        width: 100%;
+    }
 }
 /* condition tablette */
 @media all and (max-width: 991px) and  (min-width: 768px)
